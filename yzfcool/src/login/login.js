@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as homeActions from '../redux/reduces/home';
 import YzfHeader from '../components/header/header';
-import './app.scss';
-import Login from '../login/login';
-
+import './login.scss';
 
 @connect(
   state => ({
@@ -33,16 +30,19 @@ class App extends Component {
   }
 
   btnClick = () => {
-    console.log('appclick', this.props);
-    // const { history } = this.props;
-    // history.push('/home');
+    const { history } = this.props;
+    history.push('home');
   }
 
   render() {
     return (
-      <Switch>
-        <Route path="/" component={Login} />
-      </Switch>
+      <div className="app-root">
+        <YzfHeader />
+        <div className="app-content">
+          这里是登录页，最外层的route，点击按钮跳转到详情页xx
+          <button onClick={this.btnClick} > click me!</button>
+        </div>
+      </div>
     );
   }
 }

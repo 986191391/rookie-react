@@ -14,9 +14,9 @@ class App extends Component {
       <div className="aside-wrapper">
         <div className="logo">yzfCool</div>
         <aside className="aside">
-          <div onClick={() => { this.props.handleBrowserChange('home') }}>Home</div>
-          <div onClick={() => { this.props.handleBrowserChange('index/xx') }}>我的</div>
-          <div onClick={() => { this.props.handleBrowserChange('react') }}>React</div>
+          <div onClick={() => { this.props.handleBrowserChange('/home') }}>Home</div>
+          <div onClick={() => { this.props.handleBrowserChange('/home/xx') }}>我的</div>
+          <div onClick={() => { this.props.handleBrowserChange('/home/noMatch') }}>React</div>
         </aside>
       </div>
     );
