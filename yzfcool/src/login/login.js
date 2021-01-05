@@ -4,12 +4,14 @@ import { bindActionCreators } from 'redux';
 import * as homeActions from '../redux/reduces/home';
 import YzfHeader from '../components/header/header';
 import './login.scss';
+import logo from '../assets/logo.jpg';
 
 @connect(
   state => ({
     home: state.home,
     cool: 'aas'
   }),
+  // 将 reduces/home的 export方法全部绑定到当前的props中
   dispatch => bindActionCreators(homeActions, dispatch)
 )
 
@@ -18,14 +20,10 @@ class App extends Component {
   }
 
   componentWillMount() {
-    const { initalLogo } = this.props;
-    initalLogo();
   }
 
   handleBrowserChange = (address) => {
-    console.log('address', address);
     const { history, changeRoute } = this.props;
-    changeRoute();
     history.push(`/${address}`);
   }
 
@@ -39,8 +37,10 @@ class App extends Component {
       <div className="app-root">
         <YzfHeader />
         <div className="app-content">
-          这里是登录页，最外层的route，点击按钮跳转到详情页xx
-          <button onClick={this.btnClick} > click me!</button>
+          <div className="logo-wrapper" onClick={this.btnClick}>
+            <img className="logo" src={logo} />
+          </div>
+          <p className="logo-hint">Click The Jump!</p>
         </div>
       </div>
     );

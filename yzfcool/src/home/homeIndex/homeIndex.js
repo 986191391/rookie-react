@@ -10,7 +10,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="home-wrapper">
+      <div className="home-index-wrapper">
         hi, i am homeIndex Page!
       </div>
     );

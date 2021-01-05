@@ -2,7 +2,8 @@ const INITALLOGO = 'home/INITALLOGO';
 const CHANGEHISTORY = 'home/CHANGEHISTORY';
 
 const initialState = {
-  movelogo: false
+  movelogo: false,
+  storedata1: 'asdsadasdas'
 };
 
 export default function reducer(state = initialState, action = {}) {

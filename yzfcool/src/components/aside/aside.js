@@ -6,13 +6,14 @@ class App extends Component {
   }
 
   componentWillMount() {
-    console.log('propsxxxx', this.props);
   }
 
   render() {
     return (
       <div className="aside-wrapper">
-        <div className="logo">yzfCool</div>
+        <div className="logo" onClick={() => { this.props.handleBrowserChange('/') }}>
+          <span className="logo-label" title="回到首页">yzfCool</span>
+        </div>
         <aside className="aside">
           <div onClick={() => { this.props.handleBrowserChange('/home') }}>Home</div>
           <div onClick={() => { this.props.handleBrowserChange('/home/xx') }}>我的</div>
