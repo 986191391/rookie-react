@@ -26,11 +26,15 @@ class App extends Component {
   render() {
     return (
       <div className="home-wrapper">
-        <YzfAside handleBrowserChange={this.handleBrowserChange} />
-        <Switch>
-          <Route exact path="/home" component={HomeIndex} />
-          <Route path="/home/noMatch" component={NoMatch} />
-        </Switch>
+        <div className="aside">
+          <YzfAside handleBrowserChange={this.handleBrowserChange} />
+        </div>
+        <div className="main">
+          <Switch>
+            <Route exact path="/home" component={HomeIndex} />
+            <Route path="/home/noMatch" component={NoMatch} />
+          </Switch>
+        </div>
       </div>
     );
   }

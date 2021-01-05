@@ -4,4 +4,11 @@
   min-height: 100vh;
   display: flex;
 
+  .aside {
+    width: 180px;
+  }
+
+  .main {
+    width: calc(100% - 180px);
+  }
 }
