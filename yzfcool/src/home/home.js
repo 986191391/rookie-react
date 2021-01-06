@@ -4,6 +4,7 @@ import './home.scss';
 import HomeIndex from './homeIndex/homeIndex';
 import YzfAside from '../components/aside/aside';
 import NoMatch from '../components/noMatch/noMatch';
+import MarkDown from './markdown/markdown';
 
 class App extends Component {
   state = {
@@ -33,6 +34,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/home" component={HomeIndex} />
             <Route path="/home/noMatch" component={NoMatch} />
+            <Route path="/home/markdown" component={MarkDown} />
           </Switch>
         </div>
       </div>

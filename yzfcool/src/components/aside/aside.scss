@@ -16,6 +16,9 @@
     user-select: none;
 
     .logo-label {
+      font-size: 24px;
+      font-family: Impact;
+      opacity: 0.7;
       cursor: pointer;
     }
   }
@@ -23,10 +26,10 @@
   .aside {
     & > div {
       width: 100%;
-      height: 30px;
-      line-height: 30px;
-      padding: 0 10px;
-      border-bottom: 1px solid #ddd;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 15px;
+      border-bottom: 1px solid #eee;
       cursor: pointer;
 
       &:hover {

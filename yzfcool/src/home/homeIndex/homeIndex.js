@@ -5,7 +5,6 @@ class App extends Component {
   }
   
   componentWillMount() {
-    console.log('homeIndex page', this.props);
   }
 
   render() {

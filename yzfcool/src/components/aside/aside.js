@@ -18,6 +18,7 @@ class App extends Component {
           <div onClick={() => { this.props.handleBrowserChange('/home') }}>Home</div>
           <div onClick={() => { this.props.handleBrowserChange('/home/xx') }}>我的</div>
           <div onClick={() => { this.props.handleBrowserChange('/home/noMatch') }}>React</div>
+          <div onClick={() => { this.props.handleBrowserChange('/home/markdown') }}>MarkDown Tool</div>
         </aside>
       </div>
     );
