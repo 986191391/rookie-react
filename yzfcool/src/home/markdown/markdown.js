@@ -21,8 +21,9 @@ class App extends Component {
         </div>
         <div className="markdown-content">
           <pre ref="editwrapper" className="edit-wrapper">
+            
             <div className="default-line">
-              <span> </span>
+              <br />
             </div>
           </pre>
           <div className="show-wrapper">b</div>
