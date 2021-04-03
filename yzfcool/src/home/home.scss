@@ -4,11 +4,13 @@
   min-height: 100vh;
   display: flex;
 
-  .aside {
+  .home-aside {
     width: 180px;
   }
 
-  .main {
+  .home-main {
     width: calc(100% - 180px);
+    height: 100vh;
+    overflow: scroll;
   }
 }

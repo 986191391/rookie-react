@@ -40,7 +40,7 @@ class App extends Component {
           <div className="logo-wrapper" onClick={this.btnClick}>
             <img className="logo" src={logo} />
           </div>
-          <p className="logo-hint">Click The Jump!</p>
+          <p className="logo-hint">Click to Jump!</p>
         </div>
       </div>
     );

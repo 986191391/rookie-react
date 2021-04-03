@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './aside.scss';
+import logo from '../../assets/logo.jpg';
 
 class App extends Component {
   state = {
@@ -12,12 +13,12 @@ class App extends Component {
     return (
       <div className="aside-wrapper">
         <div className="logo" onClick={() => { this.props.handleBrowserChange('/') }}>
-          <span className="logo-label" title="回到首页">yzfCool</span>
+          <img className="logo-label" title="回到首页" src={logo} />
         </div>
         <aside className="aside">
           <div onClick={() => { this.props.handleBrowserChange('/home') }}>Home</div>
-          <div onClick={() => { this.props.handleBrowserChange('/home/xx') }}>我的</div>
-          <div onClick={() => { this.props.handleBrowserChange('/home/noMatch') }}>React</div>
+          <div onClick={() => { this.props.handleBrowserChange('/home/sign') }}>签章Demo</div>
+          <div onClick={() => { this.props.handleBrowserChange('/home/gobang') }}>五子棋 gobang</div>
           <div onClick={() => { this.props.handleBrowserChange('/home/markdown') }}>MarkDown Tool</div>
         </aside>
       </div>

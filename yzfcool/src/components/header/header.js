@@ -12,7 +12,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header-wrapper">
-        Rookie React Notes
+        React Toys
       </div>
     );
   }

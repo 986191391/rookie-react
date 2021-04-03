@@ -55,16 +55,16 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       },
-      (config.dev.useEslint ? {
-        test: /(\.jsx|\.js)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter'),
-          emitWarning: !config.dev.showEslintErrorsInOverlay
-        }
-      } : {})
+      // (config.dev.useEslint ? {
+      //   test: /(\.jsx|\.js)$/,
+      //   loader: 'eslint-loader',
+      //   enforce: 'pre',
+      //   include: [resolve('src'), resolve('test')],
+      //   options: {
+      //     formatter: require('eslint-friendly-formatter'),
+      //     emitWarning: !config.dev.showEslintErrorsInOverlay
+      //   }
+      // } : {})
     ]
   },
   node: {

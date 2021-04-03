@@ -1,0 +1,51 @@
+.sign-wrapper {
+  padding: 30px;
+  font-size: 30px;
+
+  .sign-hint {
+    margin-bottom: 50px;
+  }
+
+  .sign-content {
+    display: flex;
+    align-items: center;
+    height: 690px;
+
+    .file-wrapper {
+      width: 517.5px;
+      height: 690px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid #ddd;
+      position: relative;
+
+      .file {
+        width: 517.5px;
+        height: 690px;
+      }
+
+      .custom-sign {
+        position: absolute;
+
+        img {
+          width: 140px;
+          height: 140px;
+        }
+      }
+    }
+
+    .stamp-wrapper {
+      width: 200px;
+      height: 690px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .stamp-img {
+        margin-top: 10px;
+      }
+    }
+  }
+}

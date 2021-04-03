@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HomeHeader from '../homeHeader/homeHeader';
+import HomeHeader from './homeHeader/homeHeader';
 import './markdown.scss';
 
 class App extends Component {

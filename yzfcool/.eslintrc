@@ -16,7 +16,7 @@
     "func-names": ["off"],
     "react/jsx-quotes": ["off"],
     "jsx-quotes": ["error"],
-    "indent": ["error", 2, {"SwitchCase": 1}],
+    "indent": ["off", 2, {"SwitchCase": 1}],
     "no-unused-expressions": ["off"],
     "max-len": ["warn", 100, 2, {"ignoreComments": true}],
     "object-curly-spacing": ["error", "always"],
@@ -69,6 +69,7 @@
       "error",
       "always"
     ],
-    "semi": ["error", "always", { "omitLastInOneLineBlock": true}] // 结尾分号
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true}], // 结尾分号
+    "no-console": "off"
   }
 }
