@@ -62,39 +62,39 @@ class GobangComponent extends Component {
   }
 
   checkLineX(x, y) {
-    const { coordinates } = this.props.gobang;
+    const { coordinates, currentPlayer } = this.props.gobang;
     // 拿到y相同的所有数据， 即为同一行的所有数据(落点的x轴)
     const xline = coordinates.filter((item) => item.y === y);
     // 再次过滤，过滤落点位置 +-5 范围内的数据
     const xlineEffective = xline.filter((item) => (item.x < x + 5) && (item.x > x - 5));
     // 把整理好的数据 循环判断是否有5个连续相同 有则胜利 无则继续
     const isXlineWin = this.checkWin(xlineEffective);
-    if (isXlineWin) return console.log('xline win');
+    if (isXlineWin) return console.log(`${currentPlayer ? '黑棋' : '白棋'}获胜!`);
   }
 
   checkLineY(x, y) {
     // 与 checkLineY 一致
-    const { coordinates } = this.props.gobang;
+    const { coordinates, currentPlayer } = this.props.gobang;
     const yline = coordinates.filter((item) => item.x === x);
     const ylineEffective = yline.filter((item) => (item.y < y + 5) && (item.y > y - 5));
     const isYlineWin = this.checkWin(ylineEffective);
-    if (isYlineWin) return console.log('yline win');
+    if (isYlineWin) return console.log(`${currentPlayer ? '黑棋' : '白棋'}获胜!`);
   }
   
   checkDeclivous(x, y) {
-    const { coordinates } = this.props.gobang;
+    const { coordinates, currentPlayer } = this.props.gobang;
     const declivousLine = coordinates.filter((item) => item.x - item.y === x - y);
     const declivousLineEffective = declivousLine.filter((item) => (item.x < x + 5) && (item.x > x - 5));
     const isDeclivousWin = this.checkWin(declivousLineEffective);
-    if (isDeclivousWin) return console.log('declivous win');
+    if (isDeclivousWin) return console.log(`${currentPlayer ? '黑棋' : '白棋'}获胜!`);
   }
 
   checkUptilt(x, y) {
-    const { coordinates } = this.props.gobang;
+    const { coordinates, currentPlayer } = this.props.gobang;
     const uptiltLine = coordinates.filter((item) => item.x + item.y === y + x);
     const uptiltLineEffective = uptiltLine.filter((item) => (item.x < x + 5) && (item.x > x - 5));
     const isUptiltWin = this.checkWin(uptiltLineEffective);
-    if (isUptiltWin) return console.log('uptilt win');
+    if (isUptiltWin) return console.log(`${currentPlayer ? '黑棋' : '白棋'}获胜!`);
   }
 
   checkWin(checkArr) {
