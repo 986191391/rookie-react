@@ -20,6 +20,7 @@ class App extends Component {
           <div onClick={() => { this.props.handleBrowserChange('/home/sign') }}>签章Demo</div>
           <div onClick={() => { this.props.handleBrowserChange('/home/gobang') }}>五子棋 gobang</div>
           <div onClick={() => { this.props.handleBrowserChange('/home/markdown') }}>MarkDown Tool</div>
+          <div onClick={() => { this.props.handleBrowserChange('/home/viewport') }}>Viewport</div>
         </aside>
       </div>
     );

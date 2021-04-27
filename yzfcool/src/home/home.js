@@ -7,6 +7,7 @@ import NoMatch from '../components/noMatch/noMatch';
 import Gobang from './gobang/gobang';
 import MarkDown from './markdown/markdown';
 import Sign from './sign/sign';
+import Viewport from './viewport/Viewport';
 
 class App extends Component {
   state = {
@@ -38,6 +39,7 @@ class App extends Component {
             <Route path="/home/sign" component={Sign} />
             <Route path="/home/gobang" component={Gobang} />
             <Route path="/home/markdown" component={MarkDown} />
+            <Route path="/home/viewport" component={Viewport} />
           </Switch>
         </div>
       </div>
