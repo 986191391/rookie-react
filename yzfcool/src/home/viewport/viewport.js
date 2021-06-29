@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './viewport.scss';
-import vData from './viewportJSON/Adjust.json';
+import vData from './viewportJSON/ReGroup.json';
 
 class Viewport extends Component {
   state = {
@@ -40,14 +40,11 @@ class Viewport extends Component {
 
   getStyle(child) {
     let retObj = {
-      position: 'absolute', 
-      left: `${child.frame.left}px`, 
-      top: `${child.frame.top}px`,  
       height: `${child.frame.height}px`,
       zIndex: child.zIndex,
       boxSizing: 'border-box',
-      wordBreak: 'keep-all',
-      whiteSpace: 'nowrap'
+      // wordBreak: 'keep-all',
+      // whiteSpace: 'nowrap'
     };
     if (!!Object.keys(child.style).length) {
       const styleObj = child.style;
@@ -56,9 +53,25 @@ class Viewport extends Component {
     }
     if (child.type === 'View') {
       const layoutObj = {
+        position: 'absolute', 
+        left: `${child.frame.left}px`, 
+        top: `${child.frame.top}px`,  
         width: `${child.frame.width}px`, 
       }
       retObj = {...retObj, ...layoutObj};
+    }
+
+    if (child.type !== 'View') {
+      // 只要frame中有一项不为0，则进行绝对定位
+      const isAbs = Object.values(child.frame).some((item) => item !== 0);
+      if (isAbs) {
+        const layoutObj = {
+          position: 'absolute', 
+          left: `${child.frame.left}px`, 
+          top: `${child.frame.top}px`,  
+        };
+        retObj = {...retObj, ...layoutObj};
+      }
     }
     return retObj;
   }
